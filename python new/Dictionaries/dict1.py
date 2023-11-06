@@ -14,6 +14,10 @@ print(band["age"])
 print(band.get("name"))
 print(band.values())
 
+#get method assignes new values to key if not declared
+print(band.get("name","nish"))#not used for predeclared keys
+print(band.get("level","test"))
+
 band2 = dict(things="Plant", nonthings="Chair")
 print(band2.items())
 
