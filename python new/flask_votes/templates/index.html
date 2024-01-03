@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote for Your Favorite</title>
+</head>
+<body>
+    <h2>Vote for Your Favorite:</h2>
+    <form action="{{ url_for('vote') }}" method="post">
+        <label><input type="radio" name="vote" value="coffee"> Coffee</label>
+        <label><input type="radio" name="vote" value="tea"> Tea</label>
+        <button type="submit">Vote</button>
+    </form>
+    <p><a href="{{ url_for('result') }}">View Results</a></p>
+</body>
+</html>
