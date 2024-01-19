@@ -1,0 +1,8 @@
+#sqlite commands used with flask
+
+db.create_all()-->to create tables
+db.session.add(new)->new records insert
+db.session.commit()->save data
+db.query.all()->select datas from tables
+query.filter_by(name="John")->name John records fetch
+db.session.delete->delete record
