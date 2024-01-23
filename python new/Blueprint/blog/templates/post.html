@@ -1,0 +1,24 @@
+<!-- templates/blog/post.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+</head>
+<body>
+    {% if user and user['is_authenticated'] %}
+        <h1>Welcome, {{ user['username'] }}!</h1>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <!-- Additional content for authenticated users -->
+        <p>This content is visible to authenticated users.</p>
+        <p><a href="{{ url_for('blog.home') }}">Back to Home</a></p>
+        <p><a href="{{ url_for('auth.logout') }}">Logout</a></p>
+    {% else %}
+        <p>Please log in to view this blog post.</p>
+        <p><a href="{{ url_for('auth.login') }}">Login</a></p>
+    {% endif %}
+</body>
+</html>
