@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Student Records</title>
+</head>
+<body>
+    <h1>Student Records</h1>
+
+    <form method="POST" action="{{ url_for('index') }}">
+        {{ form.hidden_tag() }}
+
+        <label for="name">Name:</label>
+        {{ form.name(size=20) }}
+
+        <label for="age">Age:</label>
+        {{ form.age(size=3) }}
+
+        <label for="grade">Grade:</label>
+        {{ form.grade(size=5) }}
+
+        {{ form.submit() }}
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.age }}</td>
+                    <td>{{ student.grade }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
