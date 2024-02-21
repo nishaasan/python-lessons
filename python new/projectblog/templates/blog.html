@@ -1,0 +1,32 @@
+<!-- app/templates/blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='blog.css') }}">
+</head>
+<body>
+    <h1>Blog</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.title.label }}<br>{{ form.title }}</p>
+        <p>{{ form.content.label }}<br>{{ form.content }}</p>
+        <p>{{ form.submit }}</p>
+
+        <h2>Existing Posts:</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.content }}</p>
+                <p>Posted on: {{ post.date_posted }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+    </form>
+</body>
+</html>

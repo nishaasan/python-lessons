@@ -1,0 +1,53 @@
+/* Styles for the blog page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://picsum.photos/1920/1080'); /* Random image URL from Lorem Picsum */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add opacity to the background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post h2 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.post p {
+    color:white;
+    line-height: 1.6;
+}
+
+.post .date {
+    font-size: 14px;
+    color: #999;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px; /* Increase padding to make the input box taller */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+}
