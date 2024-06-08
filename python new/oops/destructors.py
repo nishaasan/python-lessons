@@ -1,0 +1,21 @@
+# Python program to illustrate destructor
+class Employee:
+
+	# Initializing
+	def __init__(self):
+		print('Employee created.')
+		
+    def __str__(self):
+	    return 'This is Employee class'
+
+	# Deleting (Calling destructor)
+	def __del__(self):
+		print('Destructor called, Employee deleted.')
+		
+    
+
+        
+		
+obj = Employee()
+del obj
+# print(obj)
